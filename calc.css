@@ -1,0 +1,114 @@
+	*{
+		color: white;
+	}
+
+	body
+	{
+		margin: 0;
+		padding: 0;
+		background: linear-gradient(150deg, rgb(25, 106, 255), rgb(250, 38, 38));
+	}
+
+	button{border: none; cursor: pointer; outline: none;}
+	button:hover{background: white; color: black;}
+	.parent
+	{
+		display: grid;
+		justify-content: center;
+		align-content: center;
+		height: 100vh;
+		margin: 150px auto;
+		/*background-color: white;*/
+		font-weight: bold;
+		grid-template-columns: repeat(4, 100px);
+		grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+		grid-gap: 1px;
+		grid-template-areas: 
+		"screens screens screens screens"
+		"allClear allClear del divide"
+		"one two three multiply"
+		"four five six addition"
+		"seven eight nine subtraction"
+		"decimal zero equals equals";	
+		 
+	}
+	.screens
+	{
+		background-color: black;
+		color: white;
+		position: relative;
+		padding: 20px;
+		overflow: hidden;
+	}
+	.previous
+	{
+		position: absolute;
+		right: 40px;
+		top: 20px;
+		font-size: 1.3rem;
+	}
+	.current
+	{
+		position: absolute;
+		right: 0;
+		bottom: -5px;
+		font-size: 30px;
+		word-wrap: break-word;
+		word-break: break-all;
+		padding: 10px;
+	}
+
+	.prevOperand
+	{
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		font-size: 1.3rem;
+	}
+
+
+	.btnDes, .operand
+	{
+		background: black;
+		border: none;
+		color: white;
+		font-size: 20px;
+	}
+	.operand, .allClear, .DEL
+	{
+		background: rgba(000, 000,000,0.7)
+	}
+	 .equals
+	 {
+	 	background: rgba(000, 000,000,0.7)
+	 }
+
+	.screens{grid-area: screens;}
+	.allClear{grid-area: allClear;}
+	.DEL{grid-area: del;}
+	.divide{grid-area: divide;}
+	.one{grid-area: one;}
+	.two{grid-area: two;}
+	.three{grid-area: three;}
+	.multiply{grid-area: multiply;}
+	.four{grid-area:four;}
+	.five{grid-area: five;}
+	.six{grid-area: six;}
+	.addition{grid-area: addition;}
+	.seven{grid-area: seven;}
+	.eight{grid-area: eight;}
+	.nine{grid-area: nine;}
+	.subtraction{grid-area: subtraction;}
+	.decimal{grid-area: decimal;}
+	.zero{grid-area: zero;}
+	.equals{grid-area: equals;}
+
+	.invisibol
+	{
+		position: absolute;
+		padding: 20px;
+		top:75%;
+		left: 20%;
+		opacity: 0;
+		cursor: auto;
+	}
